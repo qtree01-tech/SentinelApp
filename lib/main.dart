@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
 
 void main() {
-  runApp(SentinelApp());
+  runApp(const SentinelApp());
 }
 
 class SentinelApp extends StatelessWidget {
+  const SentinelApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sentinel v0.1',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'Sentinel',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Sentinel'),
+        ),
+        body: const Center(
+          child: Text('Sentinel APK Test Build'),
+        ),
       ),
-      home: HomeScreen(),
     );
   }
 }
